@@ -2,9 +2,8 @@ package cli_test
 
 import (
 	"flag"
-	"testing"
-
 	"github.com/codegangsta/cli"
+	"testing"
 )
 
 func TestCommandDoNotIgnoreFlags(t *testing.T) {
@@ -15,12 +14,12 @@ func TestCommandDoNotIgnoreFlags(t *testing.T) {
 
 	c := cli.NewContext(app, set, set)
 
-	command := cli.Command{
-		Name:        "test-cmd",
-		ShortName:   "tc",
-		Usage:       "this is for testing",
+	command := cli.Command {
+		Name: "test-cmd",
+		ShortName: "tc",
+		Usage: "this is for testing",
 		Description: "testing",
-		Action:      func(_ *cli.Context) {},
+		Action: func(_ *cli.Context) { },
 	}
 	err := command.Run(c)
 
@@ -35,12 +34,12 @@ func TestCommandIgnoreFlags(t *testing.T) {
 
 	c := cli.NewContext(app, set, set)
 
-	command := cli.Command{
-		Name:            "test-cmd",
-		ShortName:       "tc",
-		Usage:           "this is for testing",
-		Description:     "testing",
-		Action:          func(_ *cli.Context) {},
+	command := cli.Command {
+		Name: "test-cmd",
+		ShortName: "tc",
+		Usage: "this is for testing",
+		Description: "testing",
+		Action: func(_ *cli.Context) { },
 		SkipFlagParsing: true,
 	}
 	err := command.Run(c)

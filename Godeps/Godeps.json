@@ -6,9 +6,14 @@
 	],
 	"Deps": [
 		{
+			"ImportPath": "code.google.com/p/go.net/context",
+			"Comment": "null-136",
+			"Rev": "28ff664507e453c4455b8c65e701bbe2b2ac980d"
+		},
+		{
 			"ImportPath": "github.com/codegangsta/cli",
-			"Comment": "1.2.0-26-gf7ebb76",
-			"Rev": "f7ebb761e83e21225d1d8954fde853bf8edd46c4"
+			"Comment": "1.2.0-16-gaa19913",
+			"Rev": "aa19913be3107ab75ea67a5a88d667d62a69dbbd"
 		},
 		{
 			"ImportPath": "github.com/gin-gonic/gin",
@@ -17,7 +22,23 @@
 		},
 		{
 			"ImportPath": "github.com/julienschmidt/httprouter",
-			"Rev": "46807412fe50aaceb73bb57061c2230fd26a1640"
+			"Rev": "6db904312c78e5595a8d48c6b74fce77f407a33a"
+		},
+		{
+			"ImportPath": "github.com/savaki/httpctx",
+			"Rev": "a4528060723c86f291750082e32ca861bd70d22c"
+		},
+		{
+			"ImportPath": "github.com/savaki/stormpath-go/accounts",
+			"Rev": "3137ea9c2cd780490f832894696969e89150b425"
+		},
+		{
+			"ImportPath": "github.com/savaki/stormpath-go/auth",
+			"Rev": "3137ea9c2cd780490f832894696969e89150b425"
+		},
+		{
+			"ImportPath": "github.com/savaki/stormpath-go/types",
+			"Rev": "3137ea9c2cd780490f832894696969e89150b425"
 		}
 	]
 }
