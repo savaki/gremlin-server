@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/codegangsta/cli"
+	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 	"os"
@@ -29,8 +30,12 @@ func main() {
 }
 
 func server(c *cli.Context) {
+	routes := gin.Default()
+	routes.Use(RequireSsl)
+	AddStaticRoutes(routes)
+
 	port := c.String(FieldPort)
-	err := http.ListenAndServe(":"+port, http.FileServer(http.Dir(".")))
+	err := http.ListenAndServe(":"+port, routes)
 	if err != nil {
 		log.Fatalln(err)
 	}
