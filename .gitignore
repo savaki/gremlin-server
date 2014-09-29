@@ -1,0 +1,9 @@
+# ignore ide
+/*.iml
+/*.ipr
+/*.iws
+/.idea
+/.idea_modules
+
+# ignore temp files
+/*.env
