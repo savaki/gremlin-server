@@ -2,6 +2,7 @@
 <head>
 <script language="JavaScript" type="text/javascript">
 function signinCallback(results) {
+  console.log(JSON.stringify(results));
   var uri = '/oauth2callback?access_code=' + results["access_token"];
   console.log('setting document.root = ' + uri);
   document.location = uri;
